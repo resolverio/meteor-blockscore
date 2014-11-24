@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "blockscore": {
+      "version": "4.0.0"
+    }
+  }
+}
