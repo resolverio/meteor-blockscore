@@ -68,6 +68,10 @@ blockScore.people.list( {}, function ( error, list ) {
 
 ## Changelog
 
+### v0.1.1
+ * Added test
+ * Fixed bug with package publishing
+
 ### v0.1.0
  * Initial release
 

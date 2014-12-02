@@ -1,7 +1,7 @@
 Package.describe( {
 	name   : 'resolver:blockscore',
 	summary: 'A Meteor wrapper for BlockScore API',
-	version: '0.1.0',
+	version: '0.1.1',
 	git    : 'https://github.com/resolverio/meteor-blockscore'
 });
 
@@ -16,11 +16,16 @@ Package.onUse( function ( api ) {
 	api.addFiles( 'client/blockscore.js', 'client' );
 
 	if ( api.export ) {
-		api.export( 'BlockScore', [ 'server', 'client' ] );
+		api.export( 'BlockScore', ['server', 'client'] );
 	}
 });
 
 Package.onTest( function ( api ) {
-	api.use( 'tinytest' );
-	api.use( 'blockscore' );
+	api.use([
+		'resolver:blockscore',
+		'tinytest',
+		'test-helpers'
+	]);
+
+	api.addFiles( 'tests/blockscore-test.js', ['server', 'client'] );
 });
